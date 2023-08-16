@@ -117,3 +117,41 @@ img {
   border-radius: 50%;
   overflow: hidden;
 }
+.main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:"main__left main__middle main__right";
+  gap:1rem;
+  margin-top:5rem;
+}
+.main__left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1.5;
+  border: 5px solid black;
+  grid-area:main__left;
+  background-color:pink;
+  font-weight:bold;
+}
+.main__middle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1.5;
+  border: 5px solid black;
+  grid-area:main__middle;
+  background-color: lightblue;
+  font-weight:bold;
+}
+.main__right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1.5;
+  border:5px solid black;
+  grid-area:main__right;
+  background-color: lightgreen;
+  font-weight:bold;
+}
