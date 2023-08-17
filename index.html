@@ -26,48 +26,85 @@
                     Create
                 </label>
                 <div class="header__profile">
-                    <img src="./images/profile-1.jpg">
+                    <img class="profile-photo" src="./images/profile-1.jpg">
                 </div>
             </div>
         </div>
     </nav>
     <!--MAIN-->
     <main>
-        <div class="main container">
+        <div class="container">
         <!--===========LEFT-GRID=======================-->
-            <div class="main__left">
+            <div class="left">
                 <!--PROFILE-->
                 <div class="profile">
-                    <img src="./images/profile-1.jpg">
+                    <img  class="profile-photo" src="./images/profile-1.jpg">
                     <h4  class="profile__handle">Diana</h4>
                     <p class="text-muted">@diana</p>
                 </div>
                 <!--SIDEBAR-->
                 <div class="sidebar">
+                   <a class="sidebar-item active">
+                    <span><i class="fa-solid fa-house"></i></span><h3>Home</h3>
+                   </a> 
                    <a class="sidebar-item">
-                   
+                    <span><i class="fa-solid fa-compass"></i></span><h3>Explore</h3>
+                   </a>
+                   <!--NOTIFICATIONS-->
+                   <a class="sidebar-item" id="notifications">
+                    <span><i class="fa-solid fa-bell"></i></span><small class="notification-count"> 9+</small><h3>Notifications</h3>
+                    <!--POPUP FOR NOTIFICATION-->
+                    <div class="notfication-popup">
+                        <div class="notifcation-photo profile-photo">
+                            <img src="./images/profile-2.jpg">
+                        </div>
+                        <div class="notification-user">
+                            <b>Person 1</b> commented on your post.
+                        </div>
+                        <small>2 MINUTES AGO</small>
+                        <div class="notifcation-photo profile-photo">
+                            <img src="./images/profile-3.jpg">
+                        </div>
+                        <div class="notification-user">
+                            <b>Person 2</b> commented on your post.
+                        </div>
+                        <small>2 MINUTES AGO</small>
+                        <div class="notifcation-photo profile-photo">
+                            <img src="./images/profile-4.jpg">
+                        </div>
+                        <div class="notification-user">
+                            <b>Person 3</b> commented on your post.
+                        </div>
+                        <small>2 MINUTES AGO</small>
+                        <div class="notifcation-photo profile-photo">
+                            <img src="./images/profile-5.jpg">
+                        </div>
+                        <div class="notification-user">
+                            <b>Person 4</b> commented on your post.
+                        </div>
+                        <small>2 MINUTES AGO</small>
+                    </div>
+                   <a class="sidebar-item" id="messages">
+                    <span><i class="fa-solid fa-inbox"></i></span><small class="message-count"> 5+</small><h3>Messages</h3>
                    </a>
                    <a class="sidebar-item">
-
+                    <span><i class="fa-solid fa-user-group"></i></span><h3>Friends</h3>
                    </a>
                    <a class="sidebar-item">
-
+                    <span><i class="fa-solid fa-sun"></i></span><h3>Theme</h3>
                    </a>
                    <a class="sidebar-item">
-
+                    <span><i class="fa-solid fa-gear"></i></span><h3>Settings</h3>
                    </a>
-                   <a class="sidebar-item">
 
-                   </a>
-                   <a class="sidebar-item">
-
-                   </a>  
+                   <!--ENDING THE SIDEBAR WITH A CTA-BUTTON-->
+                   <label for="create-post" class="button button__primary">Create</label>
                 </div>
             </div>
-            <div class="main__middle">
+            <div class="middle">
 
             </div>
-            <div class="main__right">
+            <div class="right">
 
             </div>
         </div>

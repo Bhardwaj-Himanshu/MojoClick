@@ -18,6 +18,8 @@
     --search-padding:0.6rem 1rem;
     --card-padding:1rem;
     --font-size:0.9rem;
+    --sticky-top-left:5.4rem;
+    --sticky-top-right:-18rem;
 }
 
 
@@ -53,9 +55,11 @@ nav {
   margin: 0 auto;
 }
 
-img {
-  display: block;
-  width: 100%;
+.profile-photo {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .button {
@@ -108,36 +112,24 @@ img {
   align-items: center;
   gap: 1rem;
 }
-.header__cta {
-  /*just a random commit*/
+/*MAIN-----------SECTION*/
+main{
+position: relative;
+margin-top:5.4rem; /*this gets rid of the double scroll bars in y direction,but position sticky for left bar ain't working now!*/
 }
-.header__profile {
-  width: 2.5rem;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.main{
-box-sizing: border-box;  
+main .container{   
 display:grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows:1fr 1fr;
-grid-template-areas:"profile feed others"
-                    "profile feed others";
-border:5px solid black;
+grid-template-columns: 18vh auto 20vw;
+column-gap: 2rem;
+overflow: hidden;
 }
-.main__left .profile{
-border: 5px solid red;
-grid-area:profile;
+.left{
+position:sticky;  
+top:var(--sticky-top-left);
 }
-.main__left .sidebar{
-
+.middle{
+background-color: green;
 }
-.main__middle{
-grid-area:feed;
-border: 5px solid blue;
-}
-.main__right{
-grid-area:others;
-border: 5px solid green;
+.right{
+background-color: pink;
 }
