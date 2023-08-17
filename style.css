@@ -48,7 +48,10 @@ nav {
   z-index: 10;
   background-color:var(--color-white);
 }
-
+img{
+  display: block;
+  width: 100%;
+}
 /*GENERAL--STYLES*/
 .container {
   width: 80%;
@@ -112,21 +115,117 @@ nav {
   align-items: center;
   gap: 1rem;
 }
-/*MAIN-----------SECTION*/
+/*-------------MAIN-----------*/
 main{
 position: relative;
 margin-top:5.4rem; /*this gets rid of the double scroll bars in y direction,but position sticky for left bar ain't working now!*/
 }
 main .container{   
 display:grid;
-grid-template-columns: 18vh auto 20vw;
+grid-template-columns: 18vw auto 20vw;
 column-gap: 2rem;
 overflow: hidden;
 }
 .left{
-position:sticky;  
+position:sticky;
+height:max-content;  
 top:var(--sticky-top-left);
 }
+.left .profile{
+  display: block;
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  align-items: center;
+  width:100%;
+  row-gap: 1rem;
+}
+/*-------------SIDEBAR-----------*/
+.left .sidebar{
+  margin-top:1rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+.left .sidebar .sidebar-item{
+  display: flex;
+  align-items: center;
+  height:4rem;
+  cursor:pointer;
+  translate: all 300ms ease;
+  position: relative; 
+}
+.left .sidebar .sidebar-item:hover{
+  background:var(--color-light);
+}
+.left .sidebar i{
+  margin-left:2 rem;
+  position: relative; /*commenting out till I know it's purpose*/
+} 
+
+.left .sidebar .notfication-count{
+  background-color: var(--color-danger);
+  position:absolute;
+}
+.left .sidebar h3{
+  font-size: 1rem;
+  margin-left:1.5rem;
+}
+.left .sidebar .active{
+  background:var(--color-light);
+}
+.left .sidebar .active i,.left .sidebar .active h3{
+  color:var(--color-primary);
+}
+.left .sidebar .active::before{
+  content:'';
+  display: block;
+  width:0.5rem;
+  height:100%;
+  position:relative;
+  background: var(--color-primary);
+}
+.left .sidebar .sidebar-item:first-child.active{
+  border-top-left-radius: var(--card-border-radius);
+  overflow:hidden;
+}
+.left .sidebar .sidebar-item:last-child.active{
+  border-bottom-left-radius: var(--card-border-radius);
+  overflow:hidden;
+}
+.left .button{
+padding:1rem 0;
+width:100%;
+text-align: center;
+margin-top:1rem;
+}
+
+/*-----------------NOTIFICATION-POPUP-----------------*/
+.left .notification-popup{
+  position: absolute;
+  left: 110%;
+  width: 30rem;
+  background:var(--color-white);
+  top: 0; /*checks for nearest sidebar item with position:relative*/
+  border-radius: var(--card-border-radius);
+  padding:var(--card-padding);
+  display:none; /*usage of js will make it visible later*/
+}
+/*.left .notification-popup::before{ uncomment this code to get small kaju-katli!
+  content:"";
+  width:1.2rem;
+  aspect-ratio: 1/1;
+  display: block;
+  background:var(--color-danger);
+  position:absolute;
+  left:0.6 rem;
+  transform:rotate(45deg);
+}*/
+.left .notification-popup > div{
+  display:flex;
+  align-items:start;
+  gap:1rem;
+}
+
 .middle{
 background-color: green;
 }
