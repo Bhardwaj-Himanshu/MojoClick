@@ -132,7 +132,7 @@ img {
 /*-------------MAIN-----------*/
 main {
   position: relative;
-  margin-top: 5.4rem;
+  margin-top:5.4rem;
   /*this gets rid of the double scroll bars in y direction,but position sticky for left bar ain't working now!*/
 }
 
@@ -140,12 +140,12 @@ main .container {
   display: grid;
   grid-template-columns: 18vw auto 20vw;
   column-gap: 2rem;
-  overflow: hidden;
+  /*overflow:hidden*/
 }
 
 .left {
   position: sticky;
-  height: max-content;
+  height:max-content;
   top: var(--sticky-top-left);
 }
 
@@ -173,6 +173,7 @@ main .container {
   cursor: pointer;
   translate: all 300ms ease;
   position: relative;
+  justify-content: center;
 }
 
 .left .sidebar .sidebar-item:hover {
@@ -200,8 +201,8 @@ main .container {
   background: var(--color-light);
 }
 
-.left .sidebar .active i,
-.left .sidebar .active h3 {
+.left .sidebar .active i
+/*.left .sidebar .active h3*/ {
   color: var(--color-primary);
 }
 
@@ -210,7 +211,8 @@ main .container {
   display: block;
   width: 0.5rem;
   height: 100%;
-  position: relative;
+  position: absolute;
+  left:0;
   background: var(--color-primary);
 }
 
@@ -346,6 +348,52 @@ main .container {
   border-radius: var(--card-border-radius);
   padding:var(--btn-padding);
   color:var(--color-gray);
+}
+
+/*----STARTING THE FEED SECTION FROM HERE--*/
+.middle .feeds .feed{
+  background-color: var(--color-white);
+  padding:var(--card-padding);
+  margin:1rem 0;
+  border-radius:var(--card-border-radius);
+  display:flex;
+  flex-direction:column;
+  row-gap:1rem;
+}
+.middle .feeds .feed .head{
+  display: flex;
+  justify-content: space-between;
+}
+.feeds .feed .head-left{
+  display: flex;
+}
+/*.feeds .feed .head-left{
+  overflow: visible;
+}*/
+.feeds .feed .photo img{
+  border-radius: var(--card-border-radius);
+}
+.feeds .feed .liked-by{
+  display:flex;
+}
+.feeds .feed .liked-by img{
+  width:1.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.feeds .feed .head p{
+  font-size:0.9rem;
+}
+.feeds .feed .liked-by{
+  font-size: 0.9rem;
+}
+.feeds .feed .liked-by span{
+  font-weight: bold;
+}
+
+.action-buttons{
+  display:flex;
+  justify-content: space-between;
 }
 
 .right {
