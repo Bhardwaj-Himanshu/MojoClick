@@ -358,14 +358,18 @@ main .container {
   border-radius:var(--card-border-radius);
   display:flex;
   flex-direction:column;
+  line-height:1rem;
   row-gap:1rem;
 }
 .middle .feeds .feed .head{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .feeds .feed .head-left{
-  display: flex;
+  display:flex;
+  column-gap: 1rem;
+  align-items: center;
 }
 /*.feeds .feed .head-left{
   overflow: visible;
@@ -375,6 +379,7 @@ main .container {
 }
 .feeds .feed .liked-by{
   display:flex;
+  align-items: center;
 }
 .feeds .feed .liked-by img{
   width:1.5rem;
@@ -389,13 +394,48 @@ main .container {
 }
 .feeds .feed .liked-by span{
   font-weight: bold;
+  margin-left:0.5rem;
 }
 
 .action-buttons{
   display:flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .right {
-  background-color: pink;
+  height:max-content;
+}
+.right .messages{
+  background: var(--color-white);
+  padding:var(--card-padding);
+  border-radius:var(--card-border-radius);
+  margin-bottom:1rem;
+}
+.right .messages .heading{
+  display: flex;
+  justify-content: space-between;
+}
+.right .messages .search-bar{
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--btn-padding);
+  display: flex;
+  justify-content: space-between;
+}
+.right .messages .search-bar input[type="search"]{
+  background: transparent;
+  width: 100%;
+  font-size: var(--font-size);
+}
+.right .messages .category{
+  position: relative;
+  display:flex;
+  justify-content: space-between; 
+}
+
+.right .friend-requests{
+  background:var(--color-white);
+  padding:var(--card-padding);
+  border-radius:var(--card-border-radius);
 }
