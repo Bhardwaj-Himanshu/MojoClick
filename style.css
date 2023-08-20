@@ -41,7 +41,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--color-dark);
   background-color: var(--color-light);
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 nav {
@@ -438,4 +438,20 @@ main .container {
   background:var(--color-white);
   padding:var(--card-padding);
   border-radius:var(--card-border-radius);
+}
+.right .friend-requests .request{
+  background:var(--color-light);
+  padding:var(--card-padding);
+  border-radius: var(--border-radius);
+}
+.right .friend-requests .info{
+  display:flex;
+  align-items:start;
+  column-gap:1rem;
+}
+.right .friend-requests .action{
+  margin-bottom:1rem;
+}
+.right .friend-requests .action:last-child{
+  margin-bottom:0;
 }
