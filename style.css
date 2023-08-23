@@ -580,6 +580,7 @@ main .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor:pointer;
 }
 .customise-theme .background .background-picker .light>span{
   margin-right:1rem;
@@ -596,6 +597,7 @@ main .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor:pointer;
 }
 .customise-theme .background .background-picker .dim>span{
   margin-right:1rem;
@@ -612,6 +614,7 @@ main .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor:pointer;
 }
 .customise-theme .background .background-picker .lights-out>span{
   margin-right:1rem;
