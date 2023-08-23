@@ -41,7 +41,7 @@ messagesearch.addEventListener('keyup',()=>{
     message.forEach(chat=>{
         let name=chat.querySelector('h4').textContent.toLowerCase(); //when going for all,returns a typeerror in console stating cannot read lowercase()
         if(name.indexOf(val)!=-1){
-            chat.style.display='flex';
+            chat.style.display='block';
         }
         else{
             chat.style.display='none';
