@@ -14,6 +14,9 @@ const thememodal=document.querySelector('.customise-theme');
 const fontsizes=document.querySelectorAll('.choose-size span');
 //COLOR-PALETTE
 const colorpalette=document.querySelectorAll('.pick-color span');
+//BACKGROUND-PICKER
+const backgroundpicker=document.querySelectorAll('.light,.dim,.lights-out');
+
 
 //remove active class from each item-so only one remains active at a time
 const Changeactiveitem =() =>{
@@ -151,5 +154,43 @@ colorpalette.forEach(thing=>{
         }
         //assigning colorhue to the html class
         root.style.setProperty('--primary-color-hue',colorhue);
+    })
+})
+
+//Changing background using modal now
+//removing the active class
+const removebackgroundselector=()=>{
+    backgroundpicker.forEach(sub=>{
+        sub.classList.remove('active');
+    })
+}
+//a function to switch for all 3 properties instead of writing it in bottom
+const changeBG=(something)=>{
+    root.style.setProperty('dark-color-lightness',something[0]);
+    root.style.setProperty('white-color-lightness',something[1]);
+    root.style.setProperty('light-color-lightness',something[2]);
+}
+
+//js for switching the darkcolorlightness,light...".....,white....."......
+backgroundpicker.forEach(sub=>{
+    sub.addEventListener('click',()=>{
+        removebackgroundselector();
+        let backgroundproperty;
+        sub.classList.add('active');
+
+        if(sub.classList.contains('light')){
+            backgroundproperty=["\'17%\'","\'100%\'","\'95%\'"];
+            console.log("light jal rahi hai!");
+        }
+        else if(sub.classList.contains('dim')){
+            backgroundproperty=["\'90%\'","\'20%\'","\'15%\'"];
+            console.log("light dheeme ho gayi hai!");
+        }
+        else if(sub.classList.contains('lights-out')){
+            backgroundproperty=["\'95%\'","\'10%\'","\'0%\'"];
+            console.log("batti band hai ghar jao!");
+        }
+        //calling the changeBG function for root style changes
+        changeBG(backgroundproperty);
     })
 })
