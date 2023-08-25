@@ -5,7 +5,9 @@
 > Try clicking on the bell icon in the left bottom panel for a quick game!
 
 > **Warning**  
-> Unable to change the background-theme by toggling the card option.
+> Website glitching on responsiveness, ain't fully mobile responsive! Generally starts as zoomed out for mobiles, with overflow in x direction.
 
-https://github.com/Bhardwaj-Himanshu/MojoClick/assets/74407676/f1570655-439d-4a34-bb98-922a8ba72af4
+https://github.com/Bhardwaj-Himanshu/MojoClick/assets/74407676/21098d3b-cef6-4419-8545-c4c849899a21
+
+
 
