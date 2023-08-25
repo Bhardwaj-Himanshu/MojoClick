@@ -304,7 +304,7 @@ main .container {
   z-index:1;
 }
 .middle .stories .story .name{
-  color:var(--color-white);
+  color:white;
   z-index:2;
 }
 
@@ -343,6 +343,7 @@ main .container {
   border-radius: var(--card-border-radius);
 }
 .middle .create-post input[type="text"]{
+  background: none;
   width:25vw;
   justify-self: start;
 }

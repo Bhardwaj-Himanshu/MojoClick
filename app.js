@@ -166,9 +166,9 @@ const removebackgroundselector=()=>{
 }
 //a function to switch for all 3 properties instead of writing it in bottom
 const changeBG=(something)=>{
-    root.style.setProperty('dark-color-lightness',something[0]);
-    root.style.setProperty('white-color-lightness',something[1]);
-    root.style.setProperty('light-color-lightness',something[2]);
+    root.style.setProperty('--dark-color-lightness',something[0]);
+    root.style.setProperty('--white-color-lightness',something[1]);
+    root.style.setProperty('--light-color-lightness',something[2]);
 }
 
 //js for switching the darkcolorlightness,light...".....,white....."......
@@ -179,16 +179,13 @@ backgroundpicker.forEach(sub=>{
         sub.classList.add('active');
 
         if(sub.classList.contains('light')){
-            backgroundproperty=["\'17%\'","\'100%\'","\'95%\'"];
-            console.log("light jal rahi hai!");
+            backgroundproperty=['17%','100%','95%'];
         }
         else if(sub.classList.contains('dim')){
-            backgroundproperty=["\'90%\'","\'20%\'","\'15%\'"];
-            console.log("light dheeme ho gayi hai!");
+            backgroundproperty=['90%','20%','15%'];
         }
         else if(sub.classList.contains('lights-out')){
-            backgroundproperty=["\'95%\'","\'10%\'","\'0%\'"];
-            console.log("batti band hai ghar jao!");
+            backgroundproperty=['95%','10%','0%']; 
         }
         //calling the changeBG function for root style changes
         changeBG(backgroundproperty);
